@@ -58,55 +58,59 @@ form.addEventListener("submit", async function (e) {
 });
 
 btn.addEventListener("click", async function () {
-  let newProEntry = document.createElement("p");
-  let newCalEntry = document.createElement("p");
-  let newFatEntry = document.createElement("p");
-  let newNameEntry = document.createElement("p");
-  let newSizeEntry = document.createElement("p");
+  if ((itemInput.value !== "") & (sizeInput !== "")) {
+    let newProEntry = document.createElement("p");
+    let newCalEntry = document.createElement("p");
+    let newFatEntry = document.createElement("p");
+    let newNameEntry = document.createElement("p");
+    let newSizeEntry = document.createElement("p");
 
-  newFatEntry.classList.add("fat1");
-  newCalEntry.classList.add("cal1");
-  newProEntry.classList.add("pro1");
+    newFatEntry.classList.add("fat1");
+    newCalEntry.classList.add("cal1");
+    newProEntry.classList.add("pro1");
 
-  newNameEntry.textContent = itemInput.value;
-  newSizeEntry.textContent = sizeInput.value;
-  newProEntry.textContent = newPro.textContent;
-  newCalEntry.textContent = newCal.textContent;
-  newFatEntry.textContent = newFat.textContent;
+    newNameEntry.textContent = itemInput.value;
+    newSizeEntry.textContent = sizeInput.value;
+    newProEntry.textContent = newPro.textContent;
+    newCalEntry.textContent = newCal.textContent;
+    newFatEntry.textContent = newFat.textContent;
 
-  content.append(
-    newNameEntry,
-    newSizeEntry,
-    newProEntry,
-    newCalEntry,
-    newFatEntry
-  );
+    content.append(
+      newNameEntry,
+      newSizeEntry,
+      newProEntry,
+      newCalEntry,
+      newFatEntry
+    );
 
-  let cals = document.querySelectorAll(".cal1");
-  let c = 0;
-  cals.forEach((e) => {
-    c += Number(e.textContent);
-  });
+    let cals = document.querySelectorAll(".cal1");
+    let c = 0;
+    cals.forEach((e) => {
+      c += Number(e.textContent);
+    });
 
-  let pros = document.querySelectorAll(".pro1");
-  let p = 0;
-  pros.forEach((e) => {
-    p += Number(e.textContent);
-  });
+    let pros = document.querySelectorAll(".pro1");
+    let p = 0;
+    pros.forEach((e) => {
+      p += Number(e.textContent);
+    });
 
-  let fats = document.querySelectorAll(".fat1");
-  let f = 0;
-  fats.forEach((e) => {
-    f += Number(e.textContent);
-  });
+    let fats = document.querySelectorAll(".fat1");
+    let f = 0;
+    fats.forEach((e) => {
+      f += Number(e.textContent);
+    });
 
-  reset(totalCal, totalFat, totalPro);
+    reset(totalCal, totalFat, totalPro);
 
-  totalCal.textContent = c.toFixed(2);
-  totalPro.textContent = p.toFixed(2);
-  totalFat.textContent = f.toFixed(2);
+    totalCal.textContent = c.toFixed(2);
+    totalPro.textContent = p.toFixed(2);
+    totalFat.textContent = f.toFixed(2);
 
-  totalCalArea.append(totalCal);
-  totalProArea.append(totalPro);
-  totalFatArea.append(totalFat);
+    totalCalArea.append(totalCal);
+    totalProArea.append(totalPro);
+    totalFatArea.append(totalFat);
+  } else {
+    alert("please enter a valid input");
+  }
 });
