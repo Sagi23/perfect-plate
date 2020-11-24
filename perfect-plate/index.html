@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfect Plate</title>
+    <link rel="stylesheet" href="/scss/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Perfect Plate</h1>
+    </header>
+    <main>
+      <div class="landing">
+        <div class="landing-left">
+          <p class="head">Enter an item and a serving size</p>
+          <form class="form1">
+            <label for="item">Item:</label>
+            <br />
+            <input
+              type="text"
+              name="item"
+              id="item"
+              required
+              placeholder="banana"
+            />
+            <br />
+            <label for="size">Serving Size:</label>
+            <br />
+            <input
+              class="size"
+              id="size"
+              type="number"
+              name="size"
+              required
+              placeholder="200"
+            /><span>gr</span>
+            <br />
+            <button>result</button>
+          </form>
+          <div class="result-area">
+            <div class="protein card"><p class="title">protein</p></div>
+            <div class="cal card"><p class="title">calories</p></div>
+            <div class="fat card"><p class="title">fat</p></div>
+            <button class="btn">add to plate</button>
+          </div>
+        </div>
+        <div class="landing-right">
+          <p class="head">My Plate</p>
+          <div class="titles">
+            <p>name</p>
+            <p>serving size</p>
+            <p>protein</p>
+            <p>calories</p>
+            <p>fat</p>
+          </div>
+          <div class="content"></div>
+          <div class="total">
+            <div class="total-result-area">
+              <div class="total-protein card">
+                <p class="title">protein</p>
+              </div>
+              <div class="total-cal card"><p class="title">calories</p></div>
+              <div class="total-fat card"><p class="title">fat</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <h2>How it works</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In nobis
+          error quidem corporis iste non! Dolore, quaerat. Eos laboriosam, modi
+          harum, blanditiis adipisci voluptatibus earum sunt, ex reiciendis id
+          dolores! Aliquid cupiditate doloribus itaque voluptatum repellendus,
+          omnis molestiae quidem eligendi. Neque accusantium asperiores repellat
+          repellendus velit dolore earum ducimus. Perferendis dolorum commodi
+          quidem autem itaque voluptatum earum tempore quam mollitia! Quo,
+          voluptatibus voluptate quaerat odit quas tempora sapiente enim ea rem
+          nostrum ducimus deserunt laudantium repellat? Laborum sequi, sapiente,
+          nesciunt saepe cum reiciendis quasi, vel libero reprehenderit tempora
+          dignissimos debitis! Incidunt dolorum quidem tenetur est, magni aut
+          laudantium blanditiis ad illum nisi omnis fugiat id deserunt aperiam
+          nemo voluptatibus ullam dolor reprehenderit, accusantium facere
+          pariatur, necessitatibus consequuntur? Debitis, nam et? Repudiandae
+          incidunt reprehenderit esse rerum repellat repellendus aliquam illo
+          alias tempore vel laudantium ad error assumenda laborum eligendi,
+          doloremque sapiente sint, earum ullam! Velit rerum totam neque magnam
+          quam voluptatum!
+        </p>
+        <h3>About us</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+          possimus corporis optio nulla ea. Tempora optio culpa, ad nesciunt
+          veritatis praesentium excepturi assumenda inventore ratione autem
+          vitae dolor quasi nam.
+        </p>
+      </div>
+    </main>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>
