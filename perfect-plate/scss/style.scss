@@ -33,6 +33,7 @@ header {
   margin: 0 auto;
   gap: 0 5em;
 }
+
 .landing-left {
   width: 80%;
   background-color: $primery-color-2;
@@ -142,7 +143,8 @@ header {
   .total-result-area {
     position: absolute;
     bottom: 0;
-    left: 7%;
+    // left: 7%;
+    margin-left: -0.8em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -205,27 +207,72 @@ footer {
   }
 }
 
-// @media (max-width: 1024px) {
-//   .landing {
-//     display: block;
-//     width: 80%;
-//     margin: 0 auto;
-//     font-size: 16px;
-//   }
-//   .landing-left {
-//     .result-area {
-//       .card {
-//         width: 50px;
-//         height: 50px;
-//       }
-//     }
-//   }
-//   .landing-right {
-//     // width: 50%;
-//     margin-top: 5em;
-//     height: 40em;
-//   }
-//   .about {
-//     width: 70%;
-//   }
-// }
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+  header {
+    text-align: center;
+  }
+  .landing {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+  .landing-left {
+    width: 80%;
+    .result-area {
+      margin-left: -1em;
+      .card {
+        width: 5em;
+        height: 5em;
+      }
+    }
+    form {
+      .size {
+        width: 84%;
+      }
+    }
+  }
+  .landing-right {
+    margin-top: 5em;
+    height: 40em;
+    width: 80%;
+    .titles {
+      gap: 0 1em;
+      margin-left: -0.5em;
+    }
+    .total-result-area {
+      width: 85%;
+      .card {
+        width: 5em;
+        height: 5em;
+        .title {
+          margin-top: -1em;
+        }
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-items: center;
+      gap: 0 2em;
+      max-height: 22em;
+      overflow: auto;
+    }
+  }
+  .about {
+    width: 80%;
+    font-size: 16px;
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 2000px) {
+  .landing-right {
+    .total-result-area {
+      width: 85%;
+    }
+  }
+}

@@ -182,7 +182,7 @@ header h1 {
 .landing-right .total-result-area {
   position: absolute;
   bottom: 0;
-  left: 7%;
+  margin-left: -0.8em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -269,5 +269,73 @@ footer p {
 footer a {
   text-decoration: none;
   color: blue;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+  header {
+    text-align: center;
+  }
+  .landing {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+  .landing-left {
+    width: 80%;
+  }
+  .landing-left .result-area {
+    margin-left: -1em;
+  }
+  .landing-left .result-area .card {
+    width: 5em;
+    height: 5em;
+  }
+  .landing-left form .size {
+    width: 84%;
+  }
+  .landing-right {
+    margin-top: 5em;
+    height: 40em;
+    width: 80%;
+  }
+  .landing-right .titles {
+    gap: 0 1em;
+    margin-left: -0.5em;
+  }
+  .landing-right .total-result-area {
+    width: 85%;
+  }
+  .landing-right .total-result-area .card {
+    width: 5em;
+    height: 5em;
+  }
+  .landing-right .total-result-area .card .title {
+    margin-top: -1em;
+  }
+  .landing-right .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 0 2em;
+    max-height: 22em;
+    overflow: auto;
+  }
+  .about {
+    width: 80%;
+    font-size: 16px;
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 2000px) {
+  .landing-right .total-result-area {
+    width: 85%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
