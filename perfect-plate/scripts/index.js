@@ -40,12 +40,12 @@ const getDet = async (size, item) => {
     newCal.textContent = `${res.data.items[0].calories}`;
     newFat.textContent = `${res.data.items[0].fat_total_g}`;
     newPro.textContent = `${res.data.items[0].protein_g}`;
-    newFat.classList.add("nums");
     newCal.classList.add("nums");
+    newFat.classList.add("nums");
     newPro.classList.add("nums");
-    proteinOutput.append(newPro);
     calOutput.append(newCal);
     fatOutput.append(newFat);
+    proteinOutput.append(newPro);
   } catch {
     alert("somthing went wrong please make sure you enter a valid input");
   }
@@ -103,9 +103,9 @@ btn.addEventListener("click", async function () {
 
     reset(totalCal, totalFat, totalPro);
 
-    totalCal.textContent = c.toFixed(2);
-    totalPro.textContent = p.toFixed(2);
-    totalFat.textContent = f.toFixed(2);
+    totalCal.textContent = c.toFixed(1);
+    totalPro.textContent = p.toFixed(1);
+    totalFat.textContent = f.toFixed(1);
 
     totalCalArea.append(totalCal);
     totalProArea.append(totalPro);

@@ -15,7 +15,7 @@ body {
 header {
   width: 85%;
   margin: 3em auto 0;
-  font-size: 25px;
+  text-align: center;
 }
 
 header h1 {
@@ -50,10 +50,6 @@ header h1 {
   font-weight: 600;
   font-size: 1.4rem;
   margin-bottom: 2em;
-}
-
-.landing-left form {
-  position: relative;
 }
 
 .landing-left form label {
@@ -163,7 +159,7 @@ header h1 {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+  text-align: center;
   gap: 0 2em;
   font-weight: 600;
 }
@@ -177,6 +173,7 @@ header h1 {
   gap: 0 2.5em;
   max-height: 22em;
   overflow: auto;
+  width: 103%;
 }
 
 .landing-right .total-result-area {
@@ -208,28 +205,15 @@ header h1 {
   font-weight: 600;
 }
 
+.landing-right .total-result-area .card p {
+  margin-bottom: -2.5em;
+}
+
 .landing-right .total-result-area .card .title {
+  margin-bottom: 1em;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-.landing-right .total-result-area .card .nums {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-.landing-right .total-result-area .card .cal1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -269,6 +253,22 @@ footer p {
 footer a {
   text-decoration: none;
   color: blue;
+}
+
+button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: black;
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #707070;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 1024px) {
@@ -317,6 +317,9 @@ footer a {
   .landing-right .total-result-area .card {
     width: 5em;
     height: 5em;
+  }
+  .landing-right .total-result-area .card p {
+    margin-bottom: 1em;
   }
   .landing-right .total-result-area .card .title {
     margin-top: -1em;
